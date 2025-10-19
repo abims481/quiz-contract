@@ -1,0 +1,1 @@
+contract_address=0x6c7892d921e0b26f309990c4d85aa84c40ee197c
