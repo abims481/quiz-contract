@@ -1,0 +1,375 @@
+{
+"abi": [
+		{
+			"inputs": [],
+			"stateMutability": "nonpayable",
+			"type": "constructor"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "owner",
+					"type": "address"
+				}
+			],
+			"name": "OwnableInvalidOwner",
+			"type": "error"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "account",
+					"type": "address"
+				}
+			],
+			"name": "OwnableUnauthorizedAccount",
+			"type": "error"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "previousOwner",
+					"type": "address"
+				},
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "newOwner",
+					"type": "address"
+				}
+			],
+			"name": "OwnershipTransferred",
+			"type": "event"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "string",
+					"name": "_userName",
+					"type": "string"
+				}
+			],
+			"name": "create_user",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "get_all_quiz_ids",
+			"outputs": [
+				{
+					"internalType": "uint256[]",
+					"name": "",
+					"type": "uint256[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "get_all_user_addresses",
+			"outputs": [
+				{
+					"internalType": "address[]",
+					"name": "",
+					"type": "address[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_id",
+					"type": "uint256"
+				}
+			],
+			"name": "get_quiz_info",
+			"outputs": [
+				{
+					"components": [
+						{
+							"internalType": "uint256",
+							"name": "id",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint32",
+							"name": "level",
+							"type": "uint32"
+						},
+						{
+							"internalType": "uint256",
+							"name": "reward",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint32",
+							"name": "noOfQuestions",
+							"type": "uint32"
+						}
+					],
+					"internalType": "struct QuizRunContract.Quiz",
+					"name": "",
+					"type": "tuple"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "get_user_info",
+			"outputs": [
+				{
+					"components": [
+						{
+							"internalType": "address",
+							"name": "userAddress",
+							"type": "address"
+						},
+						{
+							"internalType": "string",
+							"name": "userName",
+							"type": "string"
+						},
+						{
+							"internalType": "uint256",
+							"name": "points",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "balance",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint32",
+							"name": "level",
+							"type": "uint32"
+						},
+						{
+							"internalType": "uint32",
+							"name": "completedQuizes",
+							"type": "uint32"
+						}
+					],
+					"internalType": "struct QuizRunContract.User",
+					"name": "",
+					"type": "tuple"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "owner",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"name": "quizIds",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"name": "quizes",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "id",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint32",
+					"name": "level",
+					"type": "uint32"
+				},
+				{
+					"internalType": "uint256",
+					"name": "reward",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint32",
+					"name": "noOfQuestions",
+					"type": "uint32"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "renounceOwnership",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_id",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint32",
+					"name": "_level",
+					"type": "uint32"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_reward",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint32",
+					"name": "_noOfQuestions",
+					"type": "uint32"
+				}
+			],
+			"name": "store_quiz_data",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_id",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint32",
+					"name": "_score",
+					"type": "uint32"
+				},
+				{
+					"internalType": "uint32",
+					"name": "_level",
+					"type": "uint32"
+				}
+			],
+			"name": "submit_quiz",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "newOwner",
+					"type": "address"
+				}
+			],
+			"name": "transferOwnership",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"name": "userAddresses",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"name": "users",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "userAddress",
+					"type": "address"
+				},
+				{
+					"internalType": "string",
+					"name": "userName",
+					"type": "string"
+				},
+				{
+					"internalType": "uint256",
+					"name": "points",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "balance",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint32",
+					"name": "level",
+					"type": "uint32"
+				},
+				{
+					"internalType": "uint32",
+					"name": "completedQuizes",
+					"type": "uint32"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		}
+	]
+}
